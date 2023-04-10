@@ -8,7 +8,7 @@ const Header = () => {
       <Link to="/">Job Junction</Link>
       <Link to="/statistics">Statistics</Link>
       <Link to="/appliedJobs">Applied Jobs</Link>
-      <Link to="/Blog">Blog</Link>
+      <Link to="/blog">Blog</Link>
     </nav>
   );
 };
