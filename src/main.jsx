@@ -30,6 +30,7 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <Blog></Blog>,
       },
+      { path: "/apply", element: <button>Start Applying</button> },
     ],
   },
 ]);
