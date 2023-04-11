@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Category from "../Category/Category";
+import Job from "../Job/Job";
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
@@ -27,7 +28,11 @@ const Home = () => {
           </button>
         </div>
         <div className="col-6">
-          <img src="https://picsum.photos/id/20/400/300" alt="" />
+          <img
+            className="img-fluid"
+            src="https://picsum.photos/id/20/400/300"
+            alt=""
+          />
         </div>
       </div>
       <div className="row text-center">
@@ -40,6 +45,20 @@ const Home = () => {
           <div className="category-container text-start">
             {categories.map((category) => (
               <Category key={category.id} category={category}></Category>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="row text-center">
+        <h2>Featured Jobs </h2>
+        <p>
+          Explore thousands of job opportunities with all the information you
+          need. Its your future
+        </p>
+        <div className="jobs-container">
+          <div className="job-container text-start">
+            {jobs.map((job) => (
+              <Job key={job.id} job={job}></Job>
             ))}
           </div>
         </div>
