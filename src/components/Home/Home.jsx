@@ -11,7 +11,9 @@ const Home = () => {
       .then((data) => setCategories(data));
   });
 
-  const [jobs, setJobs] = useState([]);
+  let [jobs, setJobs] = useState([]);
+  jobs = jobs.slice(0, 4);
+
   useEffect(() => {
     fetch("job.json")
       .then((res) => res.json())
@@ -48,7 +50,7 @@ const Home = () => {
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
-        <div className="home-container">
+        <div className="categories-container">
           <div className="category-container text-start">
             {categories.map((category) => (
               <Category key={category.id} category={category}></Category>
@@ -56,7 +58,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="row text-center">
+      <div className=" text-center">
         <h2>Featured Jobs </h2>
         <p>
           Explore thousands of job opportunities with all the information you
@@ -69,6 +71,9 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <button type="button" className="btn btn-primary">
+          See All Jobs
+        </button>
       </div>
     </div>
   );

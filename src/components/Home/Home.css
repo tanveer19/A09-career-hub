@@ -1,4 +1,4 @@
-.home-container {
+.categories-container {
   margin-top: 30px;
   display: grid;
   grid-template-columns: 4fr;
@@ -16,7 +16,25 @@
     rgba(152, 115, 255, 0.05) 100%
   );
   border-radius: 8px;
-  /* max-width: 310px; */
-  /* height: 240px; */
-  /* padding: 20px; */
+}
+.jobs-container {
+  margin-top: 130px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 2fr;
+  gap: 24px;
+}
+.job-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.job-container img {
+  max-width: 270px;
+  max-height: 100px;
+}
+.job-container .col {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
