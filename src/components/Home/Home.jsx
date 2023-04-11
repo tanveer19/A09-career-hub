@@ -27,7 +27,7 @@ const Home = () => {
           </button>
         </div>
         <div className="col-6">
-          <img src="https://picsum.photos/id/20/500/300" alt="" />
+          <img src="https://picsum.photos/id/20/400/300" alt="" />
         </div>
       </div>
       <div className="row text-center">

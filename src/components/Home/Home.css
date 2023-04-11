@@ -9,3 +9,14 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
+.category {
+  background: linear-gradient(
+    90deg,
+    rgba(126, 144, 254, 0.05) 0%,
+    rgba(152, 115, 255, 0.05) 100%
+  );
+  border-radius: 8px;
+  /* width: 310px; */
+  /* height: 240px; */
+  /* padding: 20px; */
+}
