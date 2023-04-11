@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import Button from "react-bootstrap/Button";
 
 const Header = () => {
   return (
-    <nav className="header">
+    <div className="header">
       <div className="container">
         <div className="row ">
           <div className="col-4 text-center">
@@ -27,7 +26,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 
