@@ -11,6 +11,13 @@ const Home = () => {
       .then((data) => setCategories(data));
   });
 
+  const [jobs, setJobs] = useState([]);
+  useEffect(() => {
+    fetch("job.json")
+      .then((res) => res.json())
+      .then((data) => setJobs(data));
+  });
+
   return (
     <div className="container">
       <div className="row">
