@@ -1,20 +1,24 @@
 [
   {
+    "id": 1,
     "logo": "https://picsum.photos/id/10/40/40",
     "name": "Account & Finance",
     "jobs": "300"
   },
   {
+    "id": 2,
     "logo": "https://picsum.photos/id/25/40/40",
     "name": "Creative Design",
     "jobs": "100+"
   },
   {
+    "id": 3,
     "logo": "https://picsum.photos/id/49/40/40",
     "name": "Marketing & Sales",
     "jobs": "150"
   },
   {
+    "id": 4,
     "logo": "https://picsum.photos/id/56/40/40",
     "name": "Engineering Job",
     "jobs": "224"

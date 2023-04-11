@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
+import Category from "../Category/Category";
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
@@ -35,14 +36,12 @@ const Home = () => {
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
-        <div className="category-container">
-          {categories.map((category) => (
-            <div className="col-4">
-              <img src={category.logo} alt="" />
-              <h3>{category.name}</h3>
-              <p>{category.jobs}</p>
-            </div>
-          ))}
+        <div className="home-container">
+          <div className="category-container text-start">
+            {categories.map((category) => (
+              <Category key={category.id} category={category}></Category>
+            ))}
+          </div>
         </div>
       </div>
     </div>
