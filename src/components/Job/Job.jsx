@@ -16,9 +16,11 @@ const Job = ({ job }) => {
         </button>
         <br />
         <span>{job.location}</span> <span>{job.salary}</span> <br />
-        <button type="button" className="btn btn-light">
-          <Link to={`/job/${job.id}`}>View Details</Link>
-        </button>
+        <Link to={`/job/${job.id}`}>
+          <button type="button" className="btn btn-primary">
+            View Details
+          </button>
+        </Link>
       </div>
     </div>
   );

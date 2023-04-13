@@ -9,7 +9,7 @@ const Home = () => {
     fetch("category.json")
       .then((res) => res.json())
       .then((data) => setCategories(data));
-  });
+  }, []);
 
   let [jobs, setJobs] = useState([]);
   jobs = jobs.slice(0, 4);
@@ -18,7 +18,7 @@ const Home = () => {
     fetch("job.json")
       .then((res) => res.json())
       .then((data) => setJobs(data));
-  });
+  }, []);
 
   return (
     <div className="container">
