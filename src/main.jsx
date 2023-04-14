@@ -36,7 +36,6 @@ const router = createBrowserRouter([
       {
         path: "/job/:jobId",
         element: <JobDetails></JobDetails>,
-        // loader: ({ params }) => fetch(`https://raw.githubusercontent.com/Porgramming-Hero-web-course/b7a9-career-hub-tanveer19/main/public/job.json?token=GHSAT0AAAAAACADE5WN4UJ2V7FRNI7ZBQFIZBXUTZQ/${params.jobId}`),
         loader: ({ params }) => fetch("job.json"),
       },
     ],
