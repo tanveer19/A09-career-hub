@@ -48,11 +48,18 @@ const Statistics = () => {
     },
   ];
   return (
-    <div>
-      <ComposedChart width={500} height={300} data={marksArray}>
-        <XAxis dataKey="name" scale="band" />
-      </ComposedChart>
-    </div>
+    <ResponsiveContainer width="100%" height="100%">
+      <div>
+        <ComposedChart width={800} height={300} data={marksArray}>
+          <Line dataKey="marks"></Line>
+          <Bar dataKey="marks" barSize={20} fill="#413ea0"></Bar>
+          <XAxis dataKey="name" scale="band" />
+          <YAxis></YAxis>
+          <Tooltip></Tooltip>
+          <Legend />
+        </ComposedChart>
+      </div>
+    </ResponsiveContainer>
   );
 };
 
