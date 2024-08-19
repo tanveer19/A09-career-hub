@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="container">
-        <div className="row ">
+        <div className="row d-flex align-items-center my-5">
           <div className="col-4 text-center">
             <Link to="/">
               <h3 className="text-dark"> Job Junction</h3>

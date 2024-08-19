@@ -6,7 +6,7 @@ const JobDetails = () => {
   const [target, setTarget] = useState({});
 
   const { id } = useParams();
-  // console.log(job);
+  console.log(job);
 
   useEffect(() => {
     const findById = (id) => {};
