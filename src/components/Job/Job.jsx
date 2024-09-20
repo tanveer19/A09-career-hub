@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const Job = ({ job }) => {
   // console.log(job);
   return (
-    <div className="container">
-      <div className="col">
-        <img className="img-fluid" src={job.companyLogo} alt="logo" />
+    <div className="">
+      <div className="">
+        <img className="max-w-64 max-h-24" src={job.companyLogo} alt="logo" />
         <h6>{job.jobTitle}</h6>
         <p>{job.companyName}</p>
         <button type="button" className="btn btn-light">

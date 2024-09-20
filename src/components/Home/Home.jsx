@@ -21,18 +21,19 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-6 text-center">
-          <h1 className="">
-            One Step <br /> Closer To Your <br /> <span>Dream Job</span>
+    <div className="">
+      <div className="flex">
+        <div className="">
+          <h1 className="text-4xl font-bold">
+            One Step <br /> Closer To Your <br />
+            <span className="">Dream Job</span>
           </h1>
           <p>
             Explore thousands of job opportunities with all the information you
             need. Its your future. Come find it. Manage all your job application
             from start to finish.
           </p>
-          <button type="button" className="btn btn-primary">
+          <button type="button" className="btn btn-primary text-white">
             Get Started
           </button>
         </div>
@@ -50,8 +51,8 @@ const Home = () => {
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
-        <div className="categories-container">
-          <div className="category-container text-start">
+        <div className="grid">
+          <div className="grid grid-cols-4 text-start">
             {categories.map((category) => (
               <Category key={category.id} category={category}></Category>
             ))}
@@ -64,8 +65,8 @@ const Home = () => {
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
-        <div className="jobs-container">
-          <div className="job-container text-start">
+        <div className="">
+          <div className="grid grid-cols-2 text-start">
             {jobs.map((job) => (
               <Job key={job.id} job={job}></Job>
             ))}
