@@ -66,7 +66,7 @@ const Home = () => {
           need. Its your future
         </p>
         <div className="">
-          <div className="grid grid-cols-2 text-start">
+          <div className="grid grid-cols-2 gap-6 text-start">
             {jobs.map((job) => (
               <Job key={job.id} job={job}></Job>
             ))}
