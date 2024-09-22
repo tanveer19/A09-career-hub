@@ -5,14 +5,16 @@ import Job from "../Job/Job";
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
+
   useEffect(() => {
     fetch("category.json")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
 
-  let [jobs, setJobs] = useState([]);
-  jobs = jobs.slice(0, 4);
+  const [jobs, setJobs] = useState([]);
+  const [dataLength, setDataLength] = useState(4);
+  // jobs = jobs.slice(0, 4);
 
   useEffect(() => {
     fetch("job.json")
@@ -67,14 +69,20 @@ const Home = () => {
         </p>
         <div className="">
           <div className="grid grid-cols-2 gap-6 text-start">
-            {jobs.map((job) => (
+            {jobs.slice(0, dataLength).map((job) => (
               <Job key={job.id} job={job}></Job>
             ))}
           </div>
         </div>
-        <button type="button" className="btn btn-primary">
-          See All Jobs
-        </button>
+        <div className={dataLength === jobs.length && "hidden"}>
+          <button
+            onClick={() => setDataLength(jobs.length)}
+            type="button"
+            className="btn btn-primary"
+          >
+            See All Jobs
+          </button>
+        </div>
       </div>
     </div>
   );
