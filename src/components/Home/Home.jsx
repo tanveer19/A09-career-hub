@@ -23,12 +23,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <div className="flex">
-        <div className="">
+        <div>
           <h1 className="text-4xl font-bold">
             One Step <br /> Closer To Your <br />
-            <span className="">Dream Job</span>
+            <span>Dream Job</span>
           </h1>
           <p>
             Explore thousands of job opportunities with all the information you
@@ -67,14 +67,12 @@ const Home = () => {
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
-        <div className="">
-          <div className="grid grid-cols-2 gap-6 text-start">
-            {jobs.slice(0, dataLength).map((job) => (
-              <Job key={job.id} job={job}></Job>
-            ))}
-          </div>
+        <div className="grid grid-cols-2 gap-6 text-start">
+          {jobs.slice(0, dataLength).map((job) => (
+            <Job key={job.id} job={job}></Job>
+          ))}
         </div>
-        <div className={dataLength === jobs.length && "hidden"}>
+        <div className={dataLength === jobs.length ? "hidden" : ""}>
           <button
             onClick={() => setDataLength(jobs.length)}
             type="button"
