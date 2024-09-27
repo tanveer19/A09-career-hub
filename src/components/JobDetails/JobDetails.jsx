@@ -30,7 +30,7 @@ const JobDetails = () => {
 
   const handleApplyJob = () => {
     saveJobApplication(id);
-    toast("toasted");
+    toast("applied to job");
   };
   return (
     <div>
