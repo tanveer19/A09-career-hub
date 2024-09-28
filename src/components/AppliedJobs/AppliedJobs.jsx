@@ -31,7 +31,30 @@ const AppliedJobs = () => {
   return (
     <div>
       <h2 className="text-2xl">Applied Jobs: {appliedJobs.length}</h2>
-      <ul></ul>
+      <details className="dropdown">
+        <summary className="btn m-1">open or close</summary>
+        <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+          <li>
+            <a>All</a>
+          </li>
+          <li>
+            <a>Remote</a>
+          </li>
+          <li>
+            <a>Onsite</a>
+          </li>
+        </ul>
+      </details>
+      <ul>
+        {appliedJobs.map((job) => (
+          <li key={job.id}>
+            <span>
+              {job.jobTitle}
+              {job.companyName}:{job.remote_onsite}
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

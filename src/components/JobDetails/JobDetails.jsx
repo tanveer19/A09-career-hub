@@ -17,7 +17,6 @@ const JobDetails = () => {
     companyLogo,
     jobTitle,
     companyName,
-    remote,
     time,
     location,
     salary,
@@ -29,7 +28,7 @@ const JobDetails = () => {
   console.log(job);
 
   const handleApplyJob = () => {
-    saveJobApplication(id);
+    saveJobApplication(idInt);
     toast("applied to job");
   };
   return (
