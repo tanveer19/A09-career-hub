@@ -62,8 +62,8 @@ const Home = () => {
         </div>
       </div>
       <div className="my-3 text-center">
-        <h2 className="text-5xl font-bold">Featured Jobs </h2>
-        <p>
+        <h2 className="text-5xl font-bold my-5">Featured Jobs </h2>
+        <p className="my-5">
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>

@@ -9,7 +9,7 @@ const Job = ({ job }) => {
     companyLogo,
     jobTitle,
     companyName,
-    remote,
+    remote_onsite,
     time,
     location,
     salary,
@@ -24,7 +24,7 @@ const Job = ({ job }) => {
         type="button"
         className="border-[#7E90FE] text-[#7E90FE] mr-4 border px-5 py-2 rounded"
       >
-        {remote}
+        {remote_onsite}
       </button>
       <button
         type="button"
