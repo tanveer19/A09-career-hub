@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Home.css";
 import Category from "../Category/Category";
 import Job from "../Job/Job";
 
@@ -54,7 +53,7 @@ const Home = () => {
           need. Its your future
         </p>
         <div className="grid">
-          <div className="grid grid-cols-4 text-start">
+          <div className="grid grid-cols-4 gap-5  text-start">
             {categories.map((category) => (
               <Category key={category.id} category={category}></Category>
             ))}

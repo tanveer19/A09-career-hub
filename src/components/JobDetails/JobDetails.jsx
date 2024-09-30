@@ -44,8 +44,11 @@ const JobDetails = () => {
             {jobResponsibility}
           </h3>
         </div>
-        <div className="border">
-          <button onClick={handleApplyJob} className="btn btn-primary w-full">
+        <div className="border flex justify-center">
+          <button
+            onClick={handleApplyJob}
+            className="btn btn-primary md:w-full"
+          >
             Apply Now
           </button>
         </div>

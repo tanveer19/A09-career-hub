@@ -1,25 +1,25 @@
 [
   {
     "id": 1,
-    "logo": "https://picsum.photos/id/10/40/40",
+    "logo": "https://i.ibb.co.com/TBZVTCs/accounts.png",
     "name": "Account & Finance",
     "jobs": "300"
   },
   {
     "id": 2,
-    "logo": "https://picsum.photos/id/25/40/40",
+    "logo": " https://i.ibb.co.com/nb7fvnY/business.png",
     "name": "Creative Design",
     "jobs": "100+"
   },
   {
     "id": 3,
-    "logo": "https://picsum.photos/id/49/40/40",
+    "logo": "https://i.ibb.co.com/h2S8nvM/social.png",
     "name": "Marketing & Sales",
     "jobs": "150"
   },
   {
     "id": 4,
-    "logo": "https://picsum.photos/id/56/40/40",
+    "logo": "https://i.ibb.co.com/LtZyNMT/chip.png",
     "name": "Engineering Job",
     "jobs": "224"
   }
