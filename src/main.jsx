@@ -9,6 +9,7 @@ import Blog from "./components/Blog/Blog";
 import Home from "./components/Home/Home";
 import ErrorPage from "./error-page";
 import JobDetails from "./components/JobDetails/JobDetails";
+import HeroRegister from "./components/HeroRegister/HeroRegister";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/register",
+        element: <HeroRegister></HeroRegister>,
       },
       {
         path: "/statistics",
