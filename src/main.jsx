@@ -10,6 +10,7 @@ import Home from "./components/Home/Home";
 import ErrorPage from "./error-page";
 import JobDetails from "./components/JobDetails/JobDetails";
 import HeroRegister from "./components/HeroRegister/HeroRegister";
+import Login from "./components/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <HeroRegister></HeroRegister>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
       {
         path: "/statistics",

@@ -7,6 +7,7 @@ import React from "react";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import auth from "../firebase/firebase.config";
+import { Link } from "react-router-dom";
 
 const HeroRegister = () => {
   const [registerError, setRegisterError] = useState("");
@@ -130,6 +131,9 @@ const HeroRegister = () => {
               <p className="text-red-600 p-5">{registerError}</p>
             )}
             {success && <p className="text-green-500 p-5">{success}</p>}
+            <p className="p-5">
+              Have account?<Link to="/login">Login</Link>
+            </p>
           </div>
         </div>
       </div>
