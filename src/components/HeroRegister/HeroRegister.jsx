@@ -8,14 +8,19 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import auth from "../firebase/firebase.config";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
 
 const HeroRegister = () => {
+  const { user, createUser } = useContext(AuthContext);
+
   const [registerError, setRegisterError] = useState("");
   const [success, setSuccess] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
+    const form = e.target;
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
@@ -38,28 +43,38 @@ const HeroRegister = () => {
     }
 
     // create user
-    createUserWithEmailAndPassword(auth, email, password).then((result) => {
-      console.log(result);
-      setSuccess("user created successfully");
 
-      // update profile
-      updateProfile(result.user, {
-        displayName: name,
-        photoURL: "example.com",
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        form.reset();
       })
-        .then(() => console.log("profile updated"))
-        .catch();
+      .catch((error) => {
+        console.log(error);
+      });
 
-      // send verification email
-      sendEmailVerification(result.user)
-        .then(() => {
-          alert("check email");
-        })
-        .catch((error) => {
-          console.error(error);
-          setRegisterError(error.message);
-        });
-    });
+    // createUserWithEmailAndPassword(auth, email, password).then((result) => {
+    //   console.log(result);
+    //   setSuccess("user created successfully");
+
+    //   // update profile
+    //   updateProfile(result.user, {
+    //     displayName: name,
+    //     photoURL: "example.com",
+    //   })
+    //     .then(() => console.log("profile updated"))
+    //     .catch();
+
+    //   // send verification email
+    //   sendEmailVerification(result.user)
+    //     .then(() => {
+    //       alert("check email");
+    //     })
+    //     .catch((error) => {
+    //       console.error(error);
+    //       setRegisterError(error.message);
+    //     });
+    // });
   };
   return (
     <div>

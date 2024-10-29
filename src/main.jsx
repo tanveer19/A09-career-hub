@@ -11,6 +11,7 @@ import ErrorPage from "./error-page";
 import JobDetails from "./components/JobDetails/JobDetails";
 import HeroRegister from "./components/HeroRegister/HeroRegister";
 import Login from "./components/Login/Login";
+import AuthProviders from "./providers/AuthProviders";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProviders>
+      <RouterProvider router={router} />
+    </AuthProviders>
   </React.StrictMode>
 );

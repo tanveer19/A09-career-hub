@@ -6,14 +6,21 @@ import { useRef } from "react";
 import { useState } from "react";
 import auth from "../firebase/firebase.config";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const { signInUser, signInWithGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const [registerError, setRegisterError] = useState("");
   const [success, setSuccess] = useState("");
   const emailRef = useRef(null);
 
   const handleLogin = (e) => {
     e.preventDefault();
+    const form = e.target;
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
@@ -24,18 +31,39 @@ const Login = () => {
 
     // add validation
 
-    signInWithEmailAndPassword(auth, email, password)
+    // signInWithEmailAndPassword(auth, email, password)
+    //   .then((result) => {
+    //     console.log(result.user);
+    //     if (result.user.emailVerified) {
+    //       setSuccess("user logged in successfully");
+    //     } else {
+    //       alert("verify email");
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.error(error);
+    //     setRegisterError(error.message);
+    //   });
+
+    signInUser(email, password)
       .then((result) => {
         console.log(result.user);
-        if (result.user.emailVerified) {
-          setSuccess("user logged in successfully");
-        } else {
-          alert("verify email");
-        }
+        form.reset();
+        navigate("/");
       })
       .catch((error) => {
-        console.error(error);
-        setRegisterError(error.message);
+        console.log(error);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -114,6 +142,11 @@ const Login = () => {
             <p className="p-5">
               Don't have account? Please <Link to="/register">Register</Link>
             </p>
+            <div className="flex justify-center">
+              <button onClick={handleGoogleSignIn} className="btn btn-primary">
+                Google
+              </button>
+            </div>
           </div>
         </div>
       </div>

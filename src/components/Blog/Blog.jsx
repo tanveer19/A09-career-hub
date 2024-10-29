@@ -3,11 +3,11 @@ import React from "react";
 const Blog = () => {
   return (
     <div>
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <h3>1. When should you use context API?</h3>
-            <p>
+      <div className="">
+        <div className="">
+          <div className="space-y-2 my-5">
+            <h3 className="bg-blue-300">1. When should you use context API?</h3>
+            <p className="bg-blue-200">
               It should be used in the following cases:
               <ol>
                 <li>
@@ -22,8 +22,8 @@ const Blog = () => {
                 </li>
               </ol>
             </p>
-            <h3>What is a custom hook?</h3>
-            <p>
+            <h3 className="bg-blue-300">What is a custom hook?</h3>
+            <p className="bg-blue-200">
               A custom hook is a reusable function that encapsulates common
               logic, such as state management or side effects, and can be used
               across multiple functional components. Custom hooks are typically
@@ -36,8 +36,8 @@ const Blog = () => {
               promoting code reusability, maintainability, and separation of
               concerns.
             </p>
-            <h3>What is useRef?</h3>
-            <p>
+            <h3 className="bg-blue-300">What is useRef?</h3>
+            <p className="bg-blue-200">
               useRef is a hook in React, that allows you to create a mutable
               reference to a value that persists across renders. It is often
               used to directly access and modify DOM elements in a React
@@ -56,8 +56,8 @@ const Blog = () => {
               requires reactivity in the UI. For that, useState or other state
               management solutions in React should be used instead.
             </p>
-            <h3>What is useMemo?</h3>
-            <p>
+            <h3 className="bg-blue-300">What is useMemo?</h3>
+            <p className="bg-blue-200">
               useMemo is a hook in React, that allows you to memoize the result
               of a computation and only recalculate it when its dependencies
               change. This can help optimize the performance of your React

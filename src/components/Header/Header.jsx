@@ -1,8 +1,16 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProviders";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => console.log("user logged out successfully"))
+      .catch((error) => console.error(error));
+  };
   return (
     <div className="header">
       <div className="">
@@ -18,6 +26,14 @@ const Header = () => {
             <NavLink to="/statistics">Statistics</NavLink>
             <NavLink to="/appliedJobs">Applied Jobs</NavLink>
             <NavLink to="/blog">Blog</NavLink>
+            {user && (
+              <>
+                <span className="font-bold">{user.email}</span>
+                <button onClick={handleLogOut} className="btn btn-xs mx-2">
+                  Sign Out
+                </button>
+              </>
+            )}
           </div>
           <div className="">
             <Link to="/apply">
